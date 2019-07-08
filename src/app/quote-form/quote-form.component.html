@@ -1,0 +1,43 @@
+
+    <div class="container-fluid">
+      
+   
+      <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+            <div class="form-group">
+      
+                <label for="author">Author</label>
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel">
+                <div [hidden]="author.pristine || author.valid" class="alert alert-info">
+                    <h6>Enter Author Name before submitting</h6>
+                </div>
+            </div>
+  <!-- Testing to see if we get any data -->
+            
+        
+        <div class="form-group">
+
+            <label for="quote">quote</label>
+            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
+            <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+              <p>quote is required</p>
+            </div>
+        </div>
+        <div class="form-group">
+
+            <label for="publisher">Posted By</label>
+            <input type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel">
+            <div [hidden]="publisher.pristine || publisher.valid" class="alert alert-info">
+                <h6>Enter Name of the person posting the Quote</h6>
+            </div>     
+        </div>
+        <div class="form-group">
+            <label for="date"> Date Posted</label><br>
+            <input type='date' id="date"  [(ngModel)]="newQuote.actualDate" name="actualDate" #actualDate="ngModel" required>
+            <div [hidden]="actualDate.pristine || actualDate.valid" class="alert alert-info">
+                <h6>Enter the Full date</h6>
+            </div>
+    </div>
+        
+        <button type="submit" class="btn btn-success">Add Quote</button>  
+    </form>
+  </div>

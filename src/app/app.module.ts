@@ -4,20 +4,18 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GoalComponent } from './goal/goal.component';
-import { GoalDetailComponent } from './goal-detail/goal-detail.component';
-import { StrikethroughDirective } from './strikethrough.directive';
-import { DateCountPipe } from './date-count.pipe';
-import { GoalFormComponent } from './goal-form/goal-form.component';
+import { QuoteComponent } from './quote/quote.component';
+import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { DateCountPipe } from './date-counting.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoalComponent,
-    GoalDetailComponent,
-    StrikethroughDirective,
+    QuoteComponent,
+    QuoteDetailComponent,
+    QuoteFormComponent,
     DateCountPipe,
-    GoalFormComponent
   ],
   imports: [
     BrowserModule,
