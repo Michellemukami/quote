@@ -14,7 +14,6 @@ export class QuoteDetailComponent implements OnInit {
   @Output() downvote = new EventEmitter<boolean>();
   @Output() quoteDelete = new EventEmitter<boolean>();
 
-  
   deleteQuote(complete:boolean){
     this.quoteDelete.emit(complete);
   }
